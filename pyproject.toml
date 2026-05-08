@@ -1,0 +1,63 @@
+[tool.poetry]
+name = "admet-predictor"
+version = "0.1.0"
+description = "Multi-task ADMET prediction for drug discovery"
+authors = ["ADMET Team <admet@example.com>"]
+readme = "README.md"
+packages = [{include = "admet_predictor", from = "src"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+torch = {version = "2.4.1", source = "pytorch-cu121"}
+torch-geometric = "2.6.1"
+rdkit = "2024.09.5"
+pytdc = "0.4.1"
+transformers = "4.44.2"
+pytorch-lightning = "2.4.0"
+mlflow = "2.16.2"
+fastapi = "0.115.4"
+uvicorn = {version = "0.32.0", extras = ["standard"]}
+pydantic = "2.9.2"
+redis = {version = "5.2.0", extras = ["asyncio"]}
+celery = "5.4.0"
+# faiss-gpu version: faiss-gpu==1.9.0 (use for GPU environments)
+faiss-cpu = "1.9.0"
+captum = "0.7.0"
+scikit-learn = "1.5.2"
+numpy = "1.26.4"
+pandas = "2.2.3"
+pyyaml = ">=6.0"
+scipy = ">=1.11"
+
+[tool.poetry.group.dev.dependencies]
+httpx = "0.27.2"
+pytest = "8.3.3"
+pytest-asyncio = "0.24.0"
+black = ">=24.0"
+ruff = ">=0.6"
+mypy = ">=1.10"
+
+[[tool.poetry.source]]
+name = "pytorch-cu121"
+url = "https://download.pytorch.org/whl/cu121"
+priority = "explicit"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+testpaths = ["tests"]
+
+[tool.black]
+line-length = 100
+target-version = ["py311"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "N", "W"]
+ignore = ["E501"]

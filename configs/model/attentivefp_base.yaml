@@ -1,0 +1,10 @@
+hidden_dim: 256
+num_gat_layers: 5
+num_attention_heads: 8
+dropout_graph: 0.15
+dropout_trunk: 0.20
+dropout_heads: 0.10
+readout_iterations: 2
+chemberta_model: "seyonec/ChemBERTa-zinc-base-v1"
+chemberta_freeze_epochs: 5
+chemberta_lr_factor: 0.1

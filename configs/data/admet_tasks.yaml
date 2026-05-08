@@ -1,0 +1,198 @@
+tasks:
+  - name: caco2_wang
+    tdc_name: Caco2_Wang
+    task_type: regression
+    metric: MAE
+    tdc_group: ADME
+    weight: 1.0
+    unit: "cm/s"
+    description: "Caco-2 cell permeability"
+
+  - name: hia_hou
+    tdc_name: HIA_Hou
+    task_type: classification
+    metric: AUROC
+    tdc_group: ADME
+    weight: 1.0
+    unit: null
+    description: "Human intestinal absorption"
+
+  - name: pgp_broccatelli
+    tdc_name: Pgp_Broccatelli
+    task_type: classification
+    metric: AUROC
+    tdc_group: ADME
+    weight: 1.0
+    unit: null
+    description: "P-glycoprotein substrate"
+
+  - name: bioavailability_ma
+    tdc_name: Bioavailability_Ma
+    task_type: classification
+    metric: AUROC
+    tdc_group: ADME
+    weight: 1.0
+    unit: null
+    description: "Oral bioavailability"
+
+  - name: lipophilicity_astrazeneca
+    tdc_name: Lipophilicity_AstraZeneca
+    task_type: regression
+    metric: MAE
+    tdc_group: ADME
+    weight: 1.0
+    unit: "logD"
+    description: "Lipophilicity (LogD7.4)"
+
+  - name: solubility_aqsoldb
+    tdc_name: Solubility_AqSolDB
+    task_type: regression
+    metric: MAE
+    tdc_group: ADME
+    weight: 1.0
+    unit: "log mol/L"
+    description: "Aqueous solubility"
+
+  - name: bbb_martini
+    tdc_name: BBB_Martini
+    task_type: classification
+    metric: AUROC
+    tdc_group: ADME
+    weight: 1.0
+    unit: null
+    description: "Blood-brain barrier penetration"
+
+  - name: ppbr_az
+    tdc_name: PPBR_AZ
+    task_type: regression
+    metric: MAE
+    tdc_group: ADME
+    weight: 1.0
+    unit: "%"
+    description: "Plasma protein binding rate"
+
+  - name: vdss_lombardo
+    tdc_name: VDss_Lombardo
+    task_type: regression
+    metric: Spearman
+    tdc_group: ADME
+    weight: 1.0
+    unit: "L/kg"
+    description: "Volume of distribution at steady state"
+
+  - name: cyp2c9_substrate_carbonmangels
+    tdc_name: CYP2C9_Substrate_CarbonMangels
+    task_type: classification
+    metric: AUROC
+    tdc_group: ADME
+    weight: 1.0
+    unit: null
+    description: "CYP2C9 substrate"
+
+  - name: cyp2d6_substrate_carbonmangels
+    tdc_name: CYP2D6_Substrate_CarbonMangels
+    task_type: classification
+    metric: AUROC
+    tdc_group: ADME
+    weight: 1.0
+    unit: null
+    description: "CYP2D6 substrate"
+
+  - name: cyp3a4_substrate_carbonmangels
+    tdc_name: CYP3A4_Substrate_CarbonMangels
+    task_type: classification
+    metric: AUROC
+    tdc_group: ADME
+    weight: 1.0
+    unit: null
+    description: "CYP3A4 substrate"
+
+  - name: cyp2c9_veith
+    tdc_name: CYP2C9_Veith
+    task_type: classification
+    metric: AUROC
+    tdc_group: ADME
+    weight: 1.0
+    unit: null
+    description: "CYP2C9 inhibitor"
+
+  - name: cyp2d6_veith
+    tdc_name: CYP2D6_Veith
+    task_type: classification
+    metric: AUROC
+    tdc_group: ADME
+    weight: 1.0
+    unit: null
+    description: "CYP2D6 inhibitor"
+
+  - name: cyp3a4_veith
+    tdc_name: CYP3A4_Veith
+    task_type: classification
+    metric: AUROC
+    tdc_group: ADME
+    weight: 1.0
+    unit: null
+    description: "CYP3A4 inhibitor"
+
+  - name: half_life_obach
+    tdc_name: Half_Life_Obach
+    task_type: regression
+    metric: Spearman
+    tdc_group: ADME
+    weight: 1.0
+    unit: "h"
+    description: "Half life"
+
+  - name: clearance_microsomal_az
+    tdc_name: Clearance_Microsomal_AZ
+    task_type: regression
+    metric: Spearman
+    tdc_group: ADME
+    weight: 1.0
+    unit: "mL/min/g"
+    description: "Microsomal clearance"
+
+  - name: clearance_hepatocyte_az
+    tdc_name: Clearance_Hepatocyte_AZ
+    task_type: regression
+    metric: Spearman
+    tdc_group: ADME
+    weight: 1.0
+    unit: "uL/min/10^6cells"
+    description: "Hepatocyte clearance"
+
+  - name: herg
+    tdc_name: hERG
+    task_type: classification
+    metric: AUROC
+    tdc_group: Tox
+    weight: 2.0
+    unit: null
+    description: "hERG channel inhibition (cardiotoxicity)"
+
+  - name: ames
+    tdc_name: AMES
+    task_type: classification
+    metric: AUROC
+    tdc_group: Tox
+    weight: 2.0
+    unit: null
+    description: "Ames mutagenicity"
+
+  - name: dili
+    tdc_name: DILI
+    task_type: classification
+    metric: AUROC
+    tdc_group: Tox
+    weight: 2.0
+    unit: null
+    description: "Drug-induced liver injury"
+
+  - name: ld50_zhu
+    tdc_name: LD50_Zhu
+    task_type: regression
+    metric: MAE
+    tdc_group: Tox
+    weight: 2.0
+    unit: "log(1/(mol/kg))"
+    description: "Acute toxicity LD50"
